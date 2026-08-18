@@ -16,7 +16,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5001/api/usage')
+    fetch('https://adoption-tracker-api.onrender.com/api/usage')
       .then((res) => res.json())
       .then((json) => setData(json))
       .catch((err) => console.error('Error fetching data:', err));
