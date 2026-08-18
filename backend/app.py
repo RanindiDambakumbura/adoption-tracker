@@ -10,5 +10,8 @@ def get_usage():
     data = generate_usage_data()
     return jsonify(data)
 
+import os
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    port = int(os.environ.get("PORT", 5001))
+    app.run(host="0.0.0.0", port=port)
